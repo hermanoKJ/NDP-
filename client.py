@@ -16,13 +16,13 @@ file_to_send = "school pic.jpeg"
 #2. Send filename with delimiter (using sendall)
 client_socket.sendall(f"{file_to_send}<NAME_END>".encode('utf-8'))
 
-#
+#Read and send file data
 with open(file_to_send, 'rb') as file:
     print(f"Sending {file_to_send}...")
-    data = file.read(1024)
+    data = file.read(BUFFER_SIZE)
     while data:
         client_socket.send(data)
-        data = file.read(1024)
+        data = file.read(BUFFER_SIZE)
 
 print("File sent completely!")
 client_socket.close()
