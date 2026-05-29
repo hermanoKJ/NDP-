@@ -9,7 +9,7 @@ BUFFER_SIZE = 4096
 
 #1. Initialize and connect
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(('localhost', 5001))
+client_socket.connect(('localhost', PORT))
 
 file_to_send = "school pic.jpeg" 
 
