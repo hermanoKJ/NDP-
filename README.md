@@ -1,2 +1,2 @@
 # NDP-
-A network app where a client can send a file to server over a network
+A network app where a client can send files to server over a network
